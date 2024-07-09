@@ -1,12 +1,12 @@
-describe('regCheck function', function() {
-    it('should check if the registration number ends with the given region identifier', function() {
-        assert.equal(regCheck('DC 55 YU GP', 'GP'), true);
-        assert.equal(regCheck('DC 55 YU GP', 'EC'), false);
-        assert.equal(regCheck('5566 L', 'L'), true);
-        assert.equal(regCheck('5566 L', 'M'), false);
-        assert.equal(regCheck('ERT 123 EC', 'EC'), true);
-        assert.equal(regCheck('ERT 123 EC', 'GP'), false);
-        assert.equal(regCheck('FGT 123 MP', 'MP'), true);
-        assert.equal(regCheck('FGT 123 MM', 'MP'), false);
+describe("testing my regCheck function", function(){
+    it("it should return true if the registration number start with CA 123 908 is from Cape Town", function(){
+        assert.equal(isFromCapeTown('CA 123 908'), true);
+
     });
+    
+    it("it should return false if the registration number start with CJ 123 908 is not from Cape Town", function(){
+        assert.equal(isFromCapeTown('CJ 123 908'), false);
+    });
+
 });
+
